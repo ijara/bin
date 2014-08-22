@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sudo ntfs-3g -o remove_hiberfile /dev/sda2 windows/

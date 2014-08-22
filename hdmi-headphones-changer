@@ -1,0 +1,28 @@
+#!/bin/bash
+myvar=`cat ~/bin/rawdata/hhc`
+
+echo $myvar
+if [[ $myvar -eq 1 ]]; ## pasar a headphones
+then   
+	rm ~/.asoundrc
+	rm ~/.asoundrc.asoundconf
+	cp ~/bin/skel/hdmi ~/.asoundrc
+	sudo alsactl restore
+	echo 2 > ~/bin/rawdata/hhc
+	clear
+	echo "HDMI"
+	exit
+fi
+if [[ $myvar -eq 2 ]] ;
+	then
+		rm ~/.asoundrc
+		cp ~/bin/skel/headphones1 ~/.asoundrc
+		cp ~/bin/skel/headphones2 ~/.asoundrc.asoundconf
+		sudo alsactl restore
+		echo 1 > ~/bin/rawdata/hhc
+		clear
+		echo "HEADPHONES"
+		exit
+fi
+
+exit
