@@ -2,8 +2,12 @@
 myvar=`cat ~/bin/rawdata/hhc`
 
 echo $myvar
+## borrar archivos .asoundrc y reemplaza por los existentes en skel
+## cabe destacar, que no detecta la configuracion actual. así que siempre es
+## recomendado correr el script un par de veces para reemplazar la config
+## por defecto
 if [[ $myvar -eq 1 ]]; ## pasar a headphones
-then   
+then
 	rm ~/.asoundrc
 	rm ~/.asoundrc.asoundconf
 	cp ~/bin/skel/hdmi ~/.asoundrc

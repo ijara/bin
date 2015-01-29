@@ -18,6 +18,8 @@ si la carpeta existe o no.
 Anteriormente usaba una pantalla y audifonos conectados por usb al pc.
 basicamente fuerza a alsa a cambiar entre audifonos y el hdmi conectado al pc,
 ya que usaba solo un tiling wm, necesitaba un script para hacer este trabajo.
+los ficheros rawdata y skel son utilizados por este script para copiar ficheros
+en el home
 
 * mpdsetup.sh
 
